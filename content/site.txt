@@ -1,0 +1,17 @@
+Title: Kirby Starterkit
+
+----
+
+Author: PHil Maurer
+
+----
+
+Description: This is Kirby's Starterkit.
+
+----
+
+Keywords: Square piano, antique piano, piano restorer, piano restoration
+
+----
+
+Copyright: © 2009-(date: Year) (link: http://aurer.co.uk text: Aurer)
