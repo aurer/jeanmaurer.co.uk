@@ -12,19 +12,9 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'assets/dist/js/build.js': ['assets/src/js/plugins.js', 'assets/src/js/vendor/quest.js', 'assets/src/js/main.js']
+					'assets/dist/js/build.js': ['assets/src/js/quicklook.js', 'assets/src/js/main.js']
 				}
 			},
-			shiv: {
-				files: {
-					'assets/dist/js/html5shiv.min.js': 'assets/src/js/vendor/html5shiv.min.js'
-				}
-			},
-			music: {
-				files: {
-					'assets/dist/js/music.js': ['assets/src/js/vendor/underscore.js', 'assets/src/js/music.js']		
-				}
-			}
 		},
 
 		less: {
