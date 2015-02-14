@@ -13,10 +13,10 @@
 
 </head>
 <body>
-  <header class="container container--header" role="banner">
-    <div class="container-inner">
-      <?php snippet('menu') ?>
-    </div> 
-  </header>
-  <div class="container container--main" role="main">
-    <div class="container-inner">
+  <div class="site-container">
+    <header class="container">
+      <div class="container-inner">
+        <h1><?php echo $site->title() ?></h1>
+      </div>
+    </header>    
+  

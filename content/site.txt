@@ -1,4 +1,4 @@
-Title: Kirby Starterkit
+Title: Jean Maurer
 
 ----
 
@@ -14,4 +14,8 @@ Keywords: Square piano, antique piano, piano restorer, piano restoration
 
 ----
 
-Copyright: © 2009-(date: Year) (link: http://aurer.co.uk text: Aurer)
+Copyright: © 2009-(date: Year) Jean Maurer
+
+----
+
+Credit: Site by (link: http://aurer.co.uk text: Aurer)
