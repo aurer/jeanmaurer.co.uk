@@ -14,9 +14,10 @@
 </head>
 <body>
   <div class="site-container">
-    <header class="container">
-      <div class="container-inner">
+    <header class="section section--header">
+      <div class="section-inner">
         <h1><?php echo $site->title() ?></h1>
+        <p><?php echo $site->description() ?></p>
       </div>
     </header>    
   
