@@ -1,3 +1,7 @@
+/* @override http://wordpress.pro/content/themes/aurer_v2/css/quicklook.css */
+
+/* @override http://wordpress.pro/content/themes/aurer_v2/css/quicklook.css */
+
 #quicklookwindow,
 #quicklookcover{
 	position: absolute;
@@ -5,17 +9,15 @@
 }
 #quicklookwindow{
 	display: none;
-	background: url(../gfx/tile.png) fixed #f7f7f7;
+	background:#000;
+	background:rgba(0,0,0,0.8);
 }
 #quicklookwindow.loading{
 	opacity: .8;
 }
-#quicklookwindow.error{
-	background: #efefef url(../gfx/404.png) no-repeat center center;
-}
 #quicklookcover{
 	position: fixed;
-	background: url(../gfx/tile.png) fixed #f7f7f7;
+	background: rgba(0,0,0,0.9);
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -44,28 +46,38 @@
 #quicklookinner img{
 	border-radius: 4px;
 }
+
 #quicklookmast{
 	position: absolute;
 	color: #fff;
 	padding: 10px;
 	left: 0;
 	right: 0;
-	top: 0;
+	top: -32px;
 	z-index: 1;
+	height: 24px;
 }
+
 #quicklookmast .title{
 	text-align: center;
 }
+
 #quicklookclose{
 	cursor:  pointer;
 	position: absolute;
-	left: 4px;
+	right: 4px;
 	top: 4px;
-	width: 16px;
-	height: 16px;
+	width: 24px;
+	height: 24px;
 	overflow: hidden;
-	background: url(../gfx/close.svg) no-repeat center center;
+	text-indent: -999px;
+	background: #fff url(/assets/dist/images/cross.svg);
 }
+
+#quicklooklink{
+	display: none;
+}
+
 #quicklookloader{
 	width: 35px;
 	height: 35px;
@@ -74,5 +86,5 @@
 	top: 50%;
 	border-radius: 5px;
 	margin: -17px 0  0 -17px;
-	background: url(../gfx/loop.gif);
+	background: #fff url(/assets/dist/images/loading.svg);
 }
