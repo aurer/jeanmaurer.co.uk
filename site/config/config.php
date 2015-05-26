@@ -28,3 +28,23 @@ make Kirby work. For more fine-grained configuration
 of the system, please check out http://getkirby.com/docs/advanced/options
 
 */
+c::set('site_email', '');
+c::set('mailgun_key', '');
+c::set('mailgun_domain', '');
+c::set('thumb_options', array(
+	'width' => 320,
+	'height' => 320,
+	'crop' => true
+));
+
+// Gallery images fetched via ajax
+c::set('routes', array(
+  array(
+    'pattern' => 'gallery/fetch',
+    'action' => function () {
+      foreach(page('gallery')->images()->offset(4) as $image) {
+      	echo snippet('gallery-image', ['image' => $image]);
+      }
+    }
+  )
+));
