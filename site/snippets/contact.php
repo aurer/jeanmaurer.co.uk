@@ -11,9 +11,9 @@
         
         if($validator->run()==true){
             $email = new Email(array(
-                'to'      => 'Phil Mau <philmau@gmail.com>',
+                'to'      => c::get('site_email'),
                 'from'    => 'Aurer emailer <noreply@aurer.co.uk>',
-                'subject' => $validator->get_value('subject', 'Response from the Aurer site'),
+                'subject' => $validator->get_value('subject', 'Response from your website'),
                 'body'    => $validator->get_value('contactname')." sent you a message\n\n".$validator->get_value('message')."\n\n".$validator->get_value('email'),
                 'service' => 'mailgun',
                 'options' => array(
@@ -33,40 +33,45 @@
         }
     }
 ?>
-<form action="<?= $page->url() ?>#section-contact" method="post" id="contact-form" class="standard contact" >
-    <div class="field fieldname-contactname <?= $validator->error_class('contactname'); ?>">
-        <label>Name *</label>
-        <div class="input">
-            <input type="text" name="contactname" value="<?= $validator->get_value('contactname'); ?>" />
-            <?= $validator->field_error('contactname') ?>
+<?php echo $section->text()->kirbytext() ?>
+<form action="<?= $page->url() ?>#section-contact" method="post" id="contact-form" class="form form--contact" >
+    <div class="grid grid--pad">
+        <div class="col-md-1of2">
+            <div class="form-field fieldname-contactname <?= $validator->error_class('contactname'); ?>">
+                <label>Name *</label>
+                <div class="form-inputs">
+                    <input type="text" name="contactname" value="<?= $validator->get_value('contactname'); ?>" />
+                    <?= $validator->field_error('contactname') ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1of2">
+            <div class="form-field fieldname-email <?= $validator->error_class('email'); ?>">
+                <label>Email *</label>
+                <div class="form-inputs">
+                    <input type="email" name="email" value="<?= $validator->get_value('email'); ?>" />
+                    <?= $validator->field_error('email') ?>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="field fieldname-email <?= $validator->error_class('email'); ?>">
-        <label>Email *</label>
-        <div class="input">
-            <input type="email" name="email" value="<?= $validator->get_value('email'); ?>" />
-            <?= $validator->field_error('email') ?>
-        </div>
-    </div>
-    
-    <div class="field fieldname-subject <?= $validator->error_class('subject'); ?>">
+    <div class="form-field fieldname-subject <?= $validator->error_class('subject'); ?>">
         <label>Subject</label>
-        <div class="input">
+        <div class="form-inputs">
             <input type="text" name="subject" value="<?= $validator->get_value('subject'); ?>" />
             <?= $validator->field_error('subject') ?>
         </div>
     </div>
     
-    <div class="field fieldname-message <?= $validator->error_class('message'); ?>">
+    <div class="form-field fieldname-message <?= $validator->error_class('message'); ?>">
         <label>Message *</label>
-        <div class="input">                    
+        <div class="form-inputs">                    
             <textarea name="message" id="in-message" cols="30" rows="10"><?= $validator->get_value('message'); ?></textarea>
             <?= $validator->field_error('message') ?>
         </div>
     </div>
     
-    <div class="field field--submit">
+    <div class="form-field field--submit">
         <input type="submit" name="submit" class="btn" value="Send" />
     </div>
 </form>
