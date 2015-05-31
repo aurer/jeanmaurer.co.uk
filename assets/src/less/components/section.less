@@ -27,4 +27,53 @@
   &--nopad &-inner {
   	padding: 0;
   }
+  
+  .section-inner {
+    padding-top: @space-lg;
+    padding-bottom: @space-lg;
+
+    > h2 {
+      margin-bottom: @space-lg;
+    }
+  }
+
+  &--header {
+    text-align: center;
+
+    h1 {
+      font-size: 4em;
+      font-family: 'Clicker Script', sans-serif;
+      margin-bottom: 0;
+
+      small {
+        font-size: 1.5rem;
+        font-family: @base-font;
+        display: block;
+      }
+    }
+  }
+  
+  &--about {
+    background: @color-neutral-lighter url(/assets/dist/images/lightpaperfibers.png);
+    box-shadow: 0 2px 60px fade(#000, 20%);
+  }
+
+  &--gallery {
+    background-color: fade(#000, 80%);
+    color: @color-neutral-lighter;
+  }
+
+  &--contact {
+    text-align: center;
+    background: @color-neutral-light url(/assets/dist/images/lightpaperfibers.png);
+    box-shadow: 0 2px 60px fade(#000, 20%);
+
+    form {
+      text-align: left;
+    }
+  }
+
+  &--footer {
+    text-align: center;
+  }
 }
