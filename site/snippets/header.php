@@ -16,8 +16,7 @@
   <div class="site-container">
     <header class="section section--header">
       <div class="section-inner">
-        <h1><?php echo $site->title() ?></h1>
-        <p><?php echo $site->description() ?></p>
+        <h1><a href="/"><?php echo $site->title() ?></a> <small><?php echo $site->description() ?></small></h1>
       </div>
     </header>    
   
