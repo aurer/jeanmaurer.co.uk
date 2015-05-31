@@ -1,5 +1,5 @@
 <?php $files = $section->files(); ?>
-<?php if ($files): ?>
+<?php if ($files->first()): ?>
 	<div class="grid grid--pad">
 		<div class="col-lg-1of2">
 			<img src="<?= $files->first()->url() ?>" alt="">
