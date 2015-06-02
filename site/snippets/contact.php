@@ -33,7 +33,7 @@
         }
     }
 ?>
-<?php if(s::get('email_sent') !== true) : ?>
+<?php if(!s::get('email_sent') !== true) : ?>
     <?php echo $section->text()->kirbytext() ?>
     <form action="<?= $page->url() ?>#section-contact" method="post" id="contact-form" class="form form--contact" >
         <div class="grid grid--pad">
@@ -69,7 +69,7 @@
     </form>
 <?php else: ?>
     <div class="sent">
-        <h2>Thanks for getting in touch.</h2>
+        <h4>Thanks for getting in touch.</h4>
         <p>I will try to get back you you as soon as possible.</p>
     </div>
 <?php endif ?>
