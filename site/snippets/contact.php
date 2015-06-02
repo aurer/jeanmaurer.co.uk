@@ -73,3 +73,4 @@
         <p>I will try to get back you you as soon as possible.</p>
     </div>
 <?php endif ?>
+<?php s::remove('email_sent'); ?>
