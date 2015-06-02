@@ -33,7 +33,7 @@
         }
     }
 ?>
-<?php if(!s::get('email_sent') !== true) : ?>
+<?php if(s::get('email_sent') !== true) : ?>
     <?php echo $section->text()->kirbytext() ?>
     <form action="<?= $page->url() ?>#section-contact" method="post" id="contact-form" class="form form--contact" >
         <div class="grid grid--pad">
