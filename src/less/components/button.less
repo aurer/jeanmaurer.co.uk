@@ -1,0 +1,42 @@
+.Button {
+	display: inline-block;
+	box-sizing: border-box;
+  padding: 1.2em 2em;
+	text-decoration: none;
+	text-align: center;
+	line-height: 1.1;
+	margin: 0 .4em .4em 0;
+	border: none;
+	outline: none;
+	background-color: @color-primary;
+	color: @color-neutral-lightest;
+	font-size: .9em;
+	border-radius: 3px;
+	overflow: hidden;
+	white-space: no-wrap;
+	text-overflow: ellipsis;
+
+	&:visited, {
+		color: @color-neutral-lightest;
+	}
+
+	&:hover, &:focus {
+		background-color: @color-primary-lighter;
+	}
+}
+
+.Button--secondary {
+	background-color: @color-secondary;
+
+	&:hover, &:focus {
+		background-color: @color-secondary-dark;
+	}
+}
+
+.Button--neutral {
+	background-color: @color-neutral;
+
+	&:hover, &:focus {
+		background-color: @color-neutral-dark;
+	}
+}

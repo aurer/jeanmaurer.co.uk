@@ -1,0 +1,29 @@
+// Primary colors
+@color-primary-lighter: tint(@color-primary, 60%);
+@color-primary-light: tint(@color-primary, 30%);
+@color-primary: #4B889B;
+@color-primary-dark: shade(@color-primary, 30%);
+@color-primary-darker: shade(@color-primary, 60%);
+
+
+// Secondary colors
+@color-secondary-lighter: tint(@color-secondary, 60%);
+@color-secondary-light: tint(@color-secondary, 30%);
+@color-secondary: spin(@color-primary, 180%);
+@color-secondary-dark: shade(@color-secondary, 30%);
+@color-secondary-darker: shade(@color-secondary, 30%);
+
+// Neutral colors
+@color-neutral-lightest: lighten(@color-neutral, 65%);
+@color-neutral-lighter: lighten(@color-neutral, 25%);
+@color-neutral-light: lighten(@color-neutral, 15%);
+@color-neutral: mix(@color-primary, #aaa, 10%);
+@color-neutral-dark: darken(@color-neutral, 15%);
+@color-neutral-darker: darken(@color-neutral, 40%);
+@color-neutral-darkest: darken(@color-neutral, 55%);
+
+// Message colors
+@color-message-info: #00a8f7;
+@color-message-success: #47b04a;
+@color-message-warning: #f5a800;
+@color-message-error: #f6412d;

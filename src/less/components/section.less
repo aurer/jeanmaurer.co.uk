@@ -1,0 +1,50 @@
+.Section {
+  clear: both;
+
+  &-inner {
+    padding: @space;
+    max-width: @mq-xl-width;
+    margin: 0 auto;
+
+    &:before,
+	  &:after {
+	    display: table;
+	    content: '';
+	    clear: both;
+	  }
+  }
+
+  &--tall &-inner {
+    padding-top: @space-lg;
+    padding-bottom: @space-lg;
+  }
+
+  &--fullwidth &-inner {
+  	padding-left: 0;
+  	padding-right: 0;
+  }
+
+  &--nopad &-inner {
+  	padding: 0;
+  }
+}
+
+.Section--intro {
+  flex: 1;
+  margin: auto;
+  text-align: center;
+
+  .Button {
+    background-color: @color-neutral-darkest;
+
+    &:hover, &:focus {
+      background-color: @color-primary;
+    }
+  }
+
+  @media @mq-lg {
+    main {
+      padding: @space 0;
+    }
+  }
+}
