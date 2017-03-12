@@ -1,10 +1,10 @@
 <?php $files = $section->files(); ?>
 <?php if ($files->first()): ?>
-	<div class="grid grid--pad">
-		<div class="col-lg-1of2">
+	<div class="Grid Grid--pad">
+		<div class="Grid-cell u-lg-size1of2">
 			<img src="<?= $files->first()->url() ?>" alt="">
 		</div>
-		<div class="col-lg-1of2">
+		<div class="Grid-cell u-lg-suze1of2">
 			<?= $section->text()->kirbytext() ?>
 		</div>
 	</div>

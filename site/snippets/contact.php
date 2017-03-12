@@ -1,14 +1,14 @@
 <?php
-    
+
     $validator = new Validator;
-    if( isset($_POST['submit']) ){ 
-        
+    if( isset($_POST['submit']) ){
+
         $validator->add_rule('contactname', 'Name', 'required');
         $validator->add_rule('email', 'Email', 'required|email');
         $validator->add_rule('message', 'Message', 'required|min(5)');
         $validator->custom_message('email', 'required', "Please enter your email, this will only be used to respond to your message");
         $validator->custom_message('email', 'email', "Please enter a valid email, this will only be used to respond to your message");
-        
+
         if($validator->run()==true){
             $email = new Email(array(
                 'to'      => c::get('site_email'),
@@ -35,35 +35,35 @@
 ?>
 <?php if(s::get('email_sent') !== true) : ?>
     <?php echo $section->text()->kirbytext() ?>
-    <form action="<?= $page->url() ?>#section-contact" method="post" id="contact-form" class="form form--contact" >
-        <div class="grid grid--pad">
-            <div class="col-md-1of2">
-                <div class="form-field fieldname-contactname <?= $validator->error_class('contactname'); ?>">
+    <form action="<?= $page->url() ?>#section-contact" method="post" id="contact-form" class="Form Form--contact" >
+        <div class="Grid Grid--pad">
+            <div class="Grid-cell u-md-size1of2">
+                <div class="Form-field fieldname-contactname <?= $validator->error_class('contactname'); ?>">
                     <label>Name *</label>
-                    <div class="form-inputs">
+                    <div class="Form-inputs">
                         <input type="text" name="contactname" value="<?= $validator->get_value('contactname'); ?>" />
                         <?= $validator->field_error('contactname') ?>
                     </div>
                 </div>
             </div>
-            <div class="col-md-1of2">
-                <div class="form-field fieldname-email <?= $validator->error_class('email'); ?>">
+            <div class="Grid-cell u-md-size1of2">
+                <div class="Form-field fieldname-email <?= $validator->error_class('email'); ?>">
                     <label>Email *</label>
-                    <div class="form-inputs">
+                    <div class="Form-inputs">
                         <input type="email" name="email" value="<?= $validator->get_value('email'); ?>" />
                         <?= $validator->field_error('email') ?>
                     </div>
                 </div>
             </div>
-        </div>    
-        <div class="form-field fieldname-message <?= $validator->error_class('message'); ?>">
+        </div>
+        <div class="Form-field fieldname-message <?= $validator->error_class('message'); ?>">
             <label>Your message *</label>
-            <div class="form-inputs">                    
+            <div class="Form-inputs">
                 <textarea name="message" id="in-message" cols="30" rows="10"><?= $validator->get_value('message'); ?></textarea>
                 <?= $validator->field_error('message') ?>
             </div>
-        </div>    
-        <div class="form-field field--submit">
+        </div>
+        <div class="Form-field">
             <input type="submit" name="submit" class="btn" value="Send" />
         </div>
     </form>

@@ -2,12 +2,18 @@
 
 title: Site
 pages: default
+files:
+  sortable: true
+  max: 1
 fields:
   title:
     label: Title
     type:  text
   author:
     label: Author
+    type:  text
+  email:
+    label: Email
     type:  text
   description:
     label: Description
