@@ -34,6 +34,10 @@
   margin: auto;
   text-align: center;
 
+  .Section-inner {
+    padding-bottom: @space-sm;
+  }
+
   h1 {
     margin-bottom: 0;
     line-height: 1;
@@ -42,6 +46,11 @@
 
   h2 {
     font-size: .9em;
+
+    @media @mq-md {
+      letter-spacing: .1em;
+      font-size: 1em;
+    }
   }
 
   .Button {
@@ -53,7 +62,8 @@
   }
 
   main {
-    padding: @space-sm 0;
+    padding: @space-xs 0;
+    margin-bottom: @space-sm;
 
     @media @mq-lg {
       padding: @space 0;
