@@ -34,6 +34,16 @@
   margin: auto;
   text-align: center;
 
+  h1 {
+    margin-bottom: 0;
+    line-height: 1;
+    margin-bottom: @space-xs;
+  }
+
+  h2 {
+    font-size: .9em;
+  }
+
   .Button {
     background-color: @color-neutral-darkest;
 
@@ -42,8 +52,10 @@
     }
   }
 
-  @media @mq-lg {
-    main {
+  main {
+    padding: @space-sm 0;
+
+    @media @mq-lg {
       padding: @space 0;
     }
   }

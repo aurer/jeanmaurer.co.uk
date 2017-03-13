@@ -4,12 +4,15 @@
 		<div class="Section-inner">
 			<header>
           <h1><a href="/"><?php echo $site->title() ?></a></h1>
+          <h2>Keyboard Instrument Restoration</h2>
       </header>
       <main>
         <p><?php echo $site->description() ?></p>
       </main>
       <footer>
-        <a href="mailto:<?php echo $site->email() ?>" class="Button"><?php echo $site->email() ?></a>
+        <?php if ($site->email() != ''): ?>
+          <a href="mailto:<?php echo $site->email() ?>" class="Button">Get in touch</a>
+        <?php endif ?>
       </footer>
 		</div>
 	</section>

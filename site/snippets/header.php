@@ -10,7 +10,7 @@
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
   <?php echo css('/assets/css/screen.css') ?>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
 
 </head>
 <body style="background-image: url(<?php echo thumb($site->files()->first(), array("width" => 30))->dataUri() ?>)" data-image="<?php echo $site->files()->first()->url() ?>">
