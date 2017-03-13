@@ -7,7 +7,7 @@
           <h2>Keyboard Instrument Restoration</h2>
       </header>
       <main>
-        <p><?php echo $site->description() ?></p>
+        <?php echo $site->description()->kirbytext() ?>
       </main>
       <footer>
         <?php if ($site->email() != ''): ?>
