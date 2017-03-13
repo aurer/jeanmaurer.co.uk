@@ -4,10 +4,10 @@
 		<div class="Section-inner">
 			<header>
           <h1><a href="/"><?php echo $site->title() ?></a></h1>
-          <h2>Keyboard Instrument Restoration</h2>
+          <h2><?php echo $site->description()->html() ?></h2>
       </header>
       <main>
-        <?php echo $site->description()->kirbytext() ?>
+        <?php echo $page->text()->kirbytext() ?>
       </main>
       <footer>
         <?php if ($site->email() != ''): ?>
