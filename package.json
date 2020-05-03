@@ -1,0 +1,9 @@
+{
+	"scripts": {
+		"start": "eleventy --serve"
+	},
+	"dependencies": {
+		"@11ty/eleventy": "11ty/eleventy",
+		"clean-css": "^4.2.3"
+	}
+}
